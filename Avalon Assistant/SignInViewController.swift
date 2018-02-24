@@ -65,11 +65,11 @@ class SignInViewController: UIViewController {
     
     func connectToServer(name : String) {
         do {
-            print(UUID().uuidString)
+            let uuid = UUID().uuidString
             
             let json = [
                 "name" : name,
-                "id" : UUID().uuidString
+                "id" : uuid
             ] 
             
             let jsonData = try JSONSerialization.data(withJSONObject: json, options: .prettyPrinted)
@@ -78,7 +78,7 @@ class SignInViewController: UIViewController {
             request.httpMethod = "POST"
             request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
             request.httpBody = jsonData
-            let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
                 if let error = error {
                     print("\(String(describing: error))")
                     return
@@ -89,6 +89,7 @@ class SignInViewController: UIViewController {
                             DispatchQueue.main.async {
                                 let nextVC = StartGameViewController()
                                 nextVC.numPlayers = result["player_count"] as! Int?
+                                nextVC.id = uuid
                                 self.present(nextVC, animated: true, completion: nil)
                             }
                         }
