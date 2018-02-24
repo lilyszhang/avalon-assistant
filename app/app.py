@@ -8,15 +8,19 @@ game = Game()
 
 @app.route('/join', methods=['GET','POST'])
 def join():
+    click.echo('New player joined')
+
     json = request.get_json()
-    click.echo(json)
-    players = game.add_player(json['uuid'], json['name'])
+    players = game.add_player(json['id'], json['name'])
     return jsonify({'player_count': len(players)})
 
-@app.route('/start', methods['GET'])
+@app.route('/start', methods=['GET'])
 def start():
+    click.echo('Starting game')
+
     players = game.assign_roles()
-    return jsonify(players)
+    serialized_players = [player.serialize() for player in players]
+    return jsonify(serialized_players)
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
