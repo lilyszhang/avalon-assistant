@@ -9,11 +9,46 @@
 import UIKit
 
 class SignInViewController: UIViewController {
-
-    @IBOutlet weak var nameField: UITextField!
+    
+    var nameField : UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let nameLabel = UILabel()
+        nameLabel.text = "Name?"
+        nameLabel.textAlignment = .center
+        nameLabel.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(nameLabel)
+        
+        nameField = UITextField()
+        nameField.borderStyle = .roundedRect
+        nameField.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(nameField)
+        
+        let joinButton = UIButton()
+        joinButton.setTitle("Join", for: .normal)
+        joinButton.backgroundColor = .green
+        joinButton.addTarget(self, action: #selector(sendNameButton(_:)), for: .touchUpInside)
+        joinButton.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(joinButton)
+        
+        let constraints = [
+            nameField.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor),
+            nameField.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor),
+            nameField.bottomAnchor.constraint(equalTo: view.centerYAnchor),
+//            nameField.widthAnchor.constraint(equalToConstant: 100),
+            
+            nameLabel.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor),
+            nameLabel.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor),
+            nameLabel.bottomAnchor.constraint(equalTo: nameField.topAnchor, constant: -20),
+
+            joinButton.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor),
+            joinButton.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor),
+            joinButton.topAnchor.constraint(equalTo: nameField.bottomAnchor, constant: 20)
+        ]
+        
+        NSLayoutConstraint.activate(constraints)
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,18 +56,21 @@ class SignInViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func sendNameButton(_ sender: Any) {
-        if text = nameField.text {
+    @objc func sendNameButton(_ sender: Any) {
+        print("here")
+        if let text = nameField.text {
             connectToServer(name: text)
         }
     }
     
     func connectToServer(name : String) {
         do {
+            print(UUID().uuidString)
             
             let json = [
-                "name" : name
-            ]
+                "name" : name,
+                "id" : UUID().uuidString
+            ] 
             
             let jsonData = try JSONSerialization.data(withJSONObject: json, options: .prettyPrinted)
             let url = URL(string: "http://10.105.106.145:5000/join")
@@ -47,6 +85,13 @@ class SignInViewController: UIViewController {
                 } else if let data = data {
                     do {
                         let result = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String:AnyObject]
+                        if let result = result {
+                            DispatchQueue.main.async {
+                                let nextVC = StartGameViewController()
+                                nextVC.numPlayers = result["player_count"] as! Int?
+                                self.present(nextVC, animated: true, completion: nil)
+                            }
+                        }
                         print("Result -> \(String(describing: result))")
                     } catch {
                         print("Error -> \(error)")
