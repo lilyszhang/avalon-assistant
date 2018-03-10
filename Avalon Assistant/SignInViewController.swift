@@ -73,7 +73,7 @@ class SignInViewController: UIViewController {
             ] 
             
             let jsonData = try JSONSerialization.data(withJSONObject: json, options: .prettyPrinted)
-            let url = URL(string: "http://10.105.106.145:5000/join")
+            let url = URL(string: kServerURL + "/join")
             var request = URLRequest(url: url!)
             request.httpMethod = "POST"
             request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")

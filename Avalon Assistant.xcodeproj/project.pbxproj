@@ -7,17 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		945B89A22054624E00444F71 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945B89A12054624E00444F71 /* Config.swift */; };
 		94B4E18C2040EE5F007AFBBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B4E18B2040EE5F007AFBBE /* AppDelegate.swift */; };
 		94B4E18E2040EE5F007AFBBE /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B4E18D2040EE5F007AFBBE /* SignInViewController.swift */; };
 		94B4E1912040EE5F007AFBBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94B4E18F2040EE5F007AFBBE /* Main.storyboard */; };
 		94B4E1932040EE5F007AFBBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94B4E1922040EE5F007AFBBE /* Assets.xcassets */; };
 		94B4E1962040EE5F007AFBBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94B4E1942040EE5F007AFBBE /* LaunchScreen.storyboard */; };
 		94B4E19E204107F5007AFBBE /* StartGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B4E19D204107F5007AFBBE /* StartGameViewController.swift */; };
-		94B4E1A02041157D007AFBBE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B4E19F2041157D007AFBBE /* ViewController.swift */; };
 		94B4E1A220411C81007AFBBE /* RoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B4E1A120411C81007AFBBE /* RoleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		945B89A12054624E00444F71 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		94B4E1882040EE5F007AFBBE /* Avalon Assistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Avalon Assistant.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		94B4E18B2040EE5F007AFBBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94B4E18D2040EE5F007AFBBE /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -26,7 +27,6 @@
 		94B4E1952040EE5F007AFBBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		94B4E1972040EE5F007AFBBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94B4E19D204107F5007AFBBE /* StartGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGameViewController.swift; sourceTree = "<group>"; };
-		94B4E19F2041157D007AFBBE /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../../ViewController.swift; sourceTree = "<group>"; };
 		94B4E1A120411C81007AFBBE /* RoleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -44,6 +44,7 @@
 		94B4E17F2040EE5F007AFBBE = {
 			isa = PBXGroup;
 			children = (
+				945B89A12054624E00444F71 /* Config.swift */,
 				94B4E18A2040EE5F007AFBBE /* Avalon Assistant */,
 				94B4E1892040EE5F007AFBBE /* Products */,
 			);
@@ -61,7 +62,6 @@
 			isa = PBXGroup;
 			children = (
 				94B4E18B2040EE5F007AFBBE /* AppDelegate.swift */,
-				94B4E19F2041157D007AFBBE /* ViewController.swift */,
 				94B4E18D2040EE5F007AFBBE /* SignInViewController.swift */,
 				94B4E1A120411C81007AFBBE /* RoleViewController.swift */,
 				94B4E19D204107F5007AFBBE /* StartGameViewController.swift */,
@@ -145,10 +145,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				945B89A22054624E00444F71 /* Config.swift in Sources */,
 				94B4E1A220411C81007AFBBE /* RoleViewController.swift in Sources */,
 				94B4E18E2040EE5F007AFBBE /* SignInViewController.swift in Sources */,
 				94B4E18C2040EE5F007AFBBE /* AppDelegate.swift in Sources */,
-				94B4E1A02041157D007AFBBE /* ViewController.swift in Sources */,
 				94B4E19E204107F5007AFBBE /* StartGameViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

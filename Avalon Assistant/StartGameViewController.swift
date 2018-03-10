@@ -54,7 +54,7 @@ class StartGameViewController: UIViewController {
     }
     
     @objc func startGame() {
-        let url = URL(string: "http://10.105.106.145:5000/start")
+        let url = URL(string: kServerURL + "/start")
         let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
             if let error = error {
                 print("\(String(describing: error))")
