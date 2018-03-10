@@ -57,7 +57,6 @@ class SignInViewController: UIViewController {
     }
     
     @objc func sendNameButton(_ sender: Any) {
-        print("here")
         if let text = nameField.text {
             connectToServer(name: text)
         }

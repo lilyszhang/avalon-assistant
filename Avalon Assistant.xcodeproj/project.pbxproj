@@ -15,6 +15,7 @@
 		94B4E1962040EE5F007AFBBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94B4E1942040EE5F007AFBBE /* LaunchScreen.storyboard */; };
 		94B4E19E204107F5007AFBBE /* StartGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B4E19D204107F5007AFBBE /* StartGameViewController.swift */; };
 		94B4E1A220411C81007AFBBE /* RoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B4E1A120411C81007AFBBE /* RoleViewController.swift */; };
+		94F9D41F2054813C00F19AA1 /* Players.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F9D41E2054813C00F19AA1 /* Players.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		94B4E1972040EE5F007AFBBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94B4E19D204107F5007AFBBE /* StartGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGameViewController.swift; sourceTree = "<group>"; };
 		94B4E1A120411C81007AFBBE /* RoleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleViewController.swift; sourceTree = "<group>"; };
+		94F9D41E2054813C00F19AA1 /* Players.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Players.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				94B4E18D2040EE5F007AFBBE /* SignInViewController.swift */,
 				94B4E1A120411C81007AFBBE /* RoleViewController.swift */,
 				94B4E19D204107F5007AFBBE /* StartGameViewController.swift */,
+				94F9D41E2054813C00F19AA1 /* Players.swift */,
 				94B4E18F2040EE5F007AFBBE /* Main.storyboard */,
 				94B4E1922040EE5F007AFBBE /* Assets.xcassets */,
 				94B4E1942040EE5F007AFBBE /* LaunchScreen.storyboard */,
@@ -145,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94F9D41F2054813C00F19AA1 /* Players.swift in Sources */,
 				945B89A22054624E00444F71 /* Config.swift in Sources */,
 				94B4E1A220411C81007AFBBE /* RoleViewController.swift in Sources */,
 				94B4E18E2040EE5F007AFBBE /* SignInViewController.swift in Sources */,

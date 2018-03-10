@@ -10,13 +10,13 @@ import UIKit
 
 class RoleViewController: UIViewController {
     
-    var role : String?
+    var role : Player? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let roleLabel = UILabel()
-        roleLabel.text = role
+        roleLabel.text = role?.name
         roleLabel.textAlignment = .center
         roleLabel.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(roleLabel)
