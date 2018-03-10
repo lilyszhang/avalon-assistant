@@ -1,5 +1,5 @@
 ## Config file
-Config.h
+Config.swift
 
 ## Python files
 *.pyc
@@ -56,3 +56,7 @@ fastlane/test_output
 ## Playgrounds
 timeline.xctimeline
 playground.xcworkspace
+
+## Project specific files
+Avalon Assistant.xcodeproj/project.pbxproj
+Avalon Assistant.xcodeproj/project.xcworkspace/xcuserdata/
