@@ -14,11 +14,13 @@ def join():
     players = game.add_player(json['id'], json['name'])
     return jsonify({'player_count': len(players)})
 
-@app.route('/start', methods=['GET'])
+@app.route('/start', methods=['POST'])
 def start():
     click.echo('Starting game')
 
-    players = game.assign_roles()
+    special_roles = request.get_json()
+    # click.echo(special_roles)
+    players = game.assign_roles(special_roles)
     serialized_players = [player.serialize() for player in players]
     return jsonify(serialized_players)
 

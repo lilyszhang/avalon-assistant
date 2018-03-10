@@ -5,8 +5,8 @@ class Player(object):
     def __init__(self, uuid, name):
         self.id = uuid
         self.name = name
-        self.team = Constants.TEAM_GOOD
-        self.role = Constants.ROLE_GOOD_NORMAL
+        self.team = Constants.TEAM['GOOD']
+        self.role = Constants.ROLE['GOOD_NORMAL']
 
     def serialize(self):
         return {

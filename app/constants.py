@@ -1,8 +1,16 @@
 class Constants:
-    ROLE_GOOD_NORMAL = 1
-    ROLE_BAD_NORMAL = 2
-    ROLE_MERLIN = 3
-    ROLE_ASSASSIN = 4
+    ROLE = {
+        'GOOD_NORMAL': 1,
+        'BAD_NORMAL': 2,
+        'MERLIN': 3,
+        'PERCIVAL': 4,
+        'ASSASSIN': 5,
+        'MORGANA': 6,
+        'MORDED': 7,
+        'OBERON': 8
+    }
 
-    TEAM_GOOD = 1
-    TEAM_BAD = 2
+    TEAM = {
+        'GOOD': 1,
+        'BAD': 2
+    }
