@@ -158,6 +158,7 @@ class StartGameViewController: UIViewController {
                                                 let nextVC = RoleViewController()
                                                 if let player = Player(rawValue: playerRole) {
                                                     nextVC.role = player
+                                                    nextVC.playersInfo = result as? Array<Dictionary<String, Any>>
                                                     self.present(nextVC, animated: true, completion: nil)
                                                 } else  {
                                                     print("error")
