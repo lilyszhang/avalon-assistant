@@ -6,7 +6,7 @@ class Constants:
         'PERCIVAL': 4,
         'ASSASSIN': 5,
         'MORGANA': 6,
-        'MORDED': 7,
+        'MORDRED': 7,
         'OBERON': 8
     }
 
