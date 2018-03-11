@@ -19,9 +19,9 @@ def start():
     click.echo('Starting game')
 
     special_roles = request.get_json()
-    # click.echo(special_roles)
     players = game.assign_roles(special_roles)
     serialized_players = [player.serialize() for player in players]
+    click.echo(serialized_players)
     return jsonify(serialized_players)
 
 if __name__ == '__main__':

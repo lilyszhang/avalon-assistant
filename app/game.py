@@ -12,7 +12,7 @@ class Game(object):
         return self.players
 
     def assign_roles(self, special_roles):
-        # random.shuffle(self.players)
+        random.shuffle(self.players)
         roles = [role for role, value in special_roles.items() if value]
 
         # get number of bad players
@@ -36,7 +36,5 @@ class Game(object):
             else:
                 player.role = Constants.ROLE['BAD_NORMAL']
 
-        # for player in self.players:
-        #     print([player.team, player.role])
-
+        random.shuffle(self.players)
         return self.players
